@@ -11,7 +11,12 @@ class BlogItem extends React.Component {
                     height: '450px'
                 }),
                 React.createElement(TextBox, {description}),
-                React.createElement(MetaInfo, {metaInfo})
+                React.createElement(MetaInfo, {
+                    author: metaInfo.author,
+                    created: metaInfo.created,
+                    modified: metaInfo.modified
+                }),
+                React.createElement(Like, {likes: metaInfo.likes})
             )
         );
     }

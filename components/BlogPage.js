@@ -13,7 +13,7 @@ const data = [
             author: 'Luc Bossiy',
             created: '2017-05-30T10:32:22.425Z',
             modified: '2017-06-01T06:11:01.425Z',
-            likes: '19'
+            likes: 19
         }
     },
     {
@@ -27,7 +27,7 @@ const data = [
             author: 'Gal Gadalka',
             created: '2017-06-03T18:58:47.425Z',
             modified: '2017-06-03T18:58:47.425Z',
-            likes: '31'
+            likes: 31
         }
     },
     {
@@ -41,7 +41,7 @@ const data = [
             author: 'Tom Cousin',
             created: '2017-06-07T12:03:23.425Z',
             modified: '2017-06-07T13:57:12.425Z',
-            likes: '27'
+            likes: 27
         }
     }
 ];
@@ -50,11 +50,11 @@ const data = [
 const Image = ({src, width, height, alt}) => (
     DOM.img(
         {
-            src: src,
-            alt: alt,
+            src,
+            alt,
             style: {
-                width: width,
-                height: height
+                width,
+                height
             }
         }
     )
@@ -113,7 +113,7 @@ class Like extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            likes: Number(this.props.likes)
+            likes: this.props.likes
         };
         this.like = _.bind(this.like, this);
     }
@@ -132,11 +132,11 @@ class Like extends React.Component {
 }
 
 Like.propTypes = {
-    likes: PropTypes.string
+    likes: PropTypes.number
 };
 
 Like.defaultProps = {
-    likes: '0'
+    likes: 0
 };
 
 
@@ -193,7 +193,7 @@ class BlogList extends React.Component {
                         {key: blogItem._id},
                         React.createElement(
                             BlogItem,
-                            _.assign({}, _.pick(blogItem, ['description', 'image', 'metaInfo']))
+                            _.pick(blogItem, ['description', 'image', 'metaInfo'])
                         ))
                 )
             )

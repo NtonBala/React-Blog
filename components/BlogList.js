@@ -6,14 +6,12 @@ class BlogList extends React.Component {
         const {blogItems} = this.props;
         return (
             DOM.ul(null, _.map(blogItems, (blogItem) => (
-                    DOM.li({key: blogItem._id}, React.createElement(BlogItem, {
-                        image: {
-                            src: blogItem.image.src,
-                            alt: blogItem.image.alt
-                        },
-                        description: blogItem.description,
-                        metaInfo: blogItem.metaInfo}
-                    ))
+                    DOM.li(
+                        {key: blogItem._id},
+                        React.createElement(
+                            BlogItem,
+                            _.pick(blogItem, ['description', 'image', 'metaInfo'])
+                        ))
                 )
             )
         )

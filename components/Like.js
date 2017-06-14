@@ -2,7 +2,7 @@ class Like extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            likes: Number(this.props.likes)
+            likes: this.props.likes
         };
         this.like = _.bind(this.like, this);
     }
@@ -14,16 +14,16 @@ class Like extends React.Component {
             DOM.span(
                 null,
                 DOM.button({onClick: this.like}, `Like`),
-                DOM.span(null, `${this.state.likes}`)
+                isNaN(this.state.likes) || DOM.span(null, `${this.state.likes}`)
             )
         );
     }
 }
 
 Like.propTypes = {
-    likes: PropTypes.string
+    likes: PropTypes.number
 };
 
 Like.defaultProps = {
-    likes: '0'
-}
+    likes: 0
+};

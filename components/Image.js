@@ -1,11 +1,11 @@
 const Image = ({src, width, height, alt}) => (
     DOM.img(
         {
-            src: src,
-            alt: alt,
+            src,
+            alt,
             style: {
-                width: width,
-                height: height
+                width,
+                height
             }
         }
     )
