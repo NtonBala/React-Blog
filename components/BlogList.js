@@ -3,14 +3,18 @@ class BlogList extends React.Component {
         super(props);
     }
     render() {
-        const {blogItems} = this.props;
+        const {blogItems, like} = this.props;
         return (
             DOM.ul(null, _.map(blogItems, (blogItem) => (
                     DOM.li(
                         {key: blogItem._id},
                         React.createElement(
                             BlogItem,
-                            _.pick(blogItem, ['description', 'image', 'metaInfo'])
+                            _.assign(
+                                {},
+                                blogItem,
+                                {like}
+                            )
                         ))
                 )
             )
@@ -20,11 +24,11 @@ class BlogList extends React.Component {
 }
 
 BlogList.propTypes = {
-    blogItems: PropTypes.arrayOf(PropTypes.shape(
-        _.assign({}, {_id: PropTypes.string.isRequired}, BlogItem.propTypes)
-    ))
+    blogItems: PropTypes.arrayOf(PropTypes.shape(BlogItem.propTypes)),
+    like: BlogItem.propTypes.like
 };
 
 BlogList.defaultProps = {
-    blogItems: [_.assign({}, {_id: 'gh67tf51'}, BlogItem.defaultProps)]
+    blogItems: [_.omit(BlogItem.defaultProps, ['like'])],
+    like: BlogItem.defaultProps.like
 };
