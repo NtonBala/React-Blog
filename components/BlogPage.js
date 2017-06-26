@@ -112,22 +112,20 @@ MetaInfo.defaultProps = {
 };
 
 //LIKE COMPONENT
-const Like = ({_id, likes, like}) => (
+const Like = ({likes, like}) => (
     DOM.span(
         null,
-        DOM.button({onClick: (e) => like(_id)}, `Like`),
+        DOM.button({onClick: (e) => like()}, `Like`),
         isNaN(likes) || DOM.span(null, `${likes}`)
     )
 );
 
 Like.propTypes = {
-    _id: PropTypes.string,
     likes: PropTypes.number,
     like: PropTypes.func
 };
 
 Like.defaultProps = {
-    _id: '676hjh67',
     likes: 0,
     like: (id) => console.log(id)
 };
@@ -152,14 +150,14 @@ class BlogItem extends React.Component {
                     created: metaInfo.created,
                     modified: metaInfo.modified
                 }),
-                React.createElement(Like, {_id, likes: metaInfo.likes, like})
+                React.createElement(Like, {likes: metaInfo.likes, like})
             )
         );
     }
 }
 
 BlogItem.propTypes = {
-    _id: Like.propTypes._id,
+    _id: PropTypes.string,
     image: PropTypes.shape({
         src: PropTypes.string,
         alt: PropTypes.string
@@ -170,7 +168,7 @@ BlogItem.propTypes = {
 };
 
 BlogItem.defaultProps = {
-    _id: Like.defaultProps.likes,
+    _id: '676hjh67',
     image: Image.defaultProps,
     description: TextBox.defaultProps.description,
     metaInfo: _.assign({}, MetaInfo.defaultProps, _.pick(Like.defaultProps, ['likes'])),
@@ -178,33 +176,24 @@ BlogItem.defaultProps = {
 };
 
 //BLOGLIST COMPONENT
-class BlogList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        const {blogItems, like} = this.props;
-        return (
-            DOM.ul(null, _.map(blogItems, (blogItem) => (
-                    DOM.li(
-                        {key: blogItem._id},
-                        React.createElement(
-                            BlogItem,
-                            _.assign(
-                                {},
-                                blogItem,
-                                {like}
-                            )
-                        ))
-                )
+const BlogList = ({blogItems, like}) => (
+    DOM.ul(null, _.map(blogItems, (blogItem) => (
+        DOM.li(
+            {key: blogItem._id},
+            React.createElement(
+                BlogItem,
+                _.assign(
+                    {},
+                    blogItem,
+                    {like: () => like(blogItem._id)}
                 )
             )
-        );
-    }
-}
+        )
+    )))
+);
 
 BlogList.propTypes = {
-    blogItems: PropTypes.arrayOf(PropTypes.shape(BlogItem.propTypes)),
+    blogItems: PropTypes.arrayOf(PropTypes.shape(_.omit(BlogItem.propTypes, ['like']))),
     like: BlogItem.propTypes.like
 };
 
@@ -264,9 +253,9 @@ class BlogPage extends React.Component {
         const {blogItems} = this.state,
             index = _.findIndex(blogItems, {_id: id});
 
-        ++blogItems[index].metaInfo.likes;
+        const newBlogItems = update(blogItems, {[index]: {metaInfo: {likes: {$apply: x => x + 1}}}});
 
-        this.setState({blogItems});
+        this.setState({blogItems: newBlogItems});
     }
     render() {
         const {blogItems} = this.state,

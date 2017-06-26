@@ -1,4 +1,3 @@
-//PIECHART COMPONENT
 class PieChart extends React.Component {
     componentDidMount() {
         const {columns} = this.props;

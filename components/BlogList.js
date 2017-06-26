@@ -1,30 +1,21 @@
-class BlogList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        const {blogItems, like} = this.props;
-        return (
-            DOM.ul(null, _.map(blogItems, (blogItem) => (
-                    DOM.li(
-                        {key: blogItem._id},
-                        React.createElement(
-                            BlogItem,
-                            _.assign(
-                                {},
-                                blogItem,
-                                {like}
-                            )
-                        ))
+const BlogList = ({blogItems, like}) => (
+    DOM.ul(null, _.map(blogItems, (blogItem) => (
+        DOM.li(
+            {key: blogItem._id},
+            React.createElement(
+                BlogItem,
+                _.assign(
+                    {},
+                    blogItem,
+                    {like: () => like(blogItem._id)}
                 )
             )
         )
-    );
-    }
-}
+    )))
+);
 
 BlogList.propTypes = {
-    blogItems: PropTypes.arrayOf(PropTypes.shape(BlogItem.propTypes)),
+    blogItems: PropTypes.arrayOf(PropTypes.shape(_.omit(BlogItem.propTypes, ['like']))),
     like: BlogItem.propTypes.like
 };
 

@@ -16,14 +16,14 @@ class BlogItem extends React.Component {
                     created: metaInfo.created,
                     modified: metaInfo.modified
                 }),
-                React.createElement(Like, {_id, likes: metaInfo.likes, like})
+                React.createElement(Like, {likes: metaInfo.likes, like})
             )
         );
     }
 }
 
 BlogItem.propTypes = {
-    _id: Like.propTypes._id,
+    _id: PropTypes.string,
     image: PropTypes.shape({
         src: PropTypes.string,
         alt: PropTypes.string
@@ -34,7 +34,7 @@ BlogItem.propTypes = {
 };
 
 BlogItem.defaultProps = {
-    _id: Like.defaultProps.likes,
+    _id: '676hjh67',
     image: Image.defaultProps,
     description: TextBox.defaultProps.description,
     metaInfo: _.assign({}, MetaInfo.defaultProps, _.pick(Like.defaultProps, ['likes'])),
