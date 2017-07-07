@@ -1,3 +1,10 @@
+import React from 'react';
+import {DOM, PropTypes} from 'react';
+
+import _ from 'lodash';
+
+import BlogItem from './BlogItem';
+
 const BlogList = ({blogItems, like}) => (
     DOM.ul(null, _.map(blogItems, (blogItem) => (
         DOM.li(
@@ -15,7 +22,9 @@ const BlogList = ({blogItems, like}) => (
 );
 
 BlogList.propTypes = {
-    blogItems: PropTypes.arrayOf(PropTypes.shape(_.omit(BlogItem.propTypes, ['like']))),
+    blogItems: PropTypes.arrayOf(
+        PropTypes.shape(_.omit(BlogItem.propTypes, ['like']))
+    ),
     like: BlogItem.propTypes.like
 };
 
@@ -23,3 +32,5 @@ BlogList.defaultProps = {
     blogItems: [_.omit(BlogItem.defaultProps, ['like'])],
     like: BlogItem.defaultProps.like
 };
+
+export default BlogList;

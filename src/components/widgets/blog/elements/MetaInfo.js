@@ -1,8 +1,13 @@
+import React from 'react';
+import {DOM, PropTypes} from 'react';
+
+import {formatDate} from 'helpers/date';
+
 const MetaInfo = ({author, created, modified}) => (
     DOM.span(
         null,
-        `${author} ${moment(created).format('DD.MM.YY kk:mm')}`,
-        modified && DOM.span(null, `(last modified: ${moment(modified).format('DD.MM.YY kk:mm')})`)
+        `${author} ${formatDate(created)}`,
+        modified && DOM.span(null, `(last modified: ${formatDate(modified)})`)
     )
 );
 
@@ -17,3 +22,5 @@ MetaInfo.defaultProps = {
     created: '1970-01-01T00:00:00.013Z',
     modified: '1970-01-01T00:00:00.013Z'
 };
+
+export default MetaInfo;

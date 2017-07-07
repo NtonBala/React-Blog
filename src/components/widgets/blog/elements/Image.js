@@ -1,3 +1,6 @@
+import React from 'react';
+import {DOM, PropTypes} from 'react';
+
 const Image = ({src, width, height, alt}) => (
     DOM.img(
         {
@@ -24,3 +27,5 @@ Image.defaultProps = {
     width: '300px',
     height: '450px'
 };
+
+export default Image;

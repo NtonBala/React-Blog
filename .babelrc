@@ -1,0 +1,7 @@
+{
+  "presets": [
+    "latest",
+    "react"
+  ],
+  "plugins": ["react-hot-loader/babel"]
+}

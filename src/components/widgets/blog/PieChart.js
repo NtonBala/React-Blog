@@ -1,3 +1,8 @@
+import React from 'react';
+import {PropTypes} from 'react';
+
+import c3 from 'c3';
+
 class PieChart extends React.Component {
     componentDidMount() {
         const {columns} = this.props;
@@ -17,7 +22,7 @@ class PieChart extends React.Component {
         this.pieChart = this.pieChart.destroy();
     }
     render() {
-        return <div ref={el => this.container = el} />
+        return <div ref={el => this.container = el} />;
     }
 }
 
@@ -33,3 +38,5 @@ PieChart.propTypes = {
 PieChart.defaultProps = {
     columns: [['Valerian', 5]]
 };
+
+export default PieChart;
