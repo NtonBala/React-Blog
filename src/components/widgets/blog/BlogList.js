@@ -1,20 +1,29 @@
 import React from 'react';
-import {DOM, PropTypes} from 'react';
+import {PropTypes} from 'react';
 
 import _ from 'lodash';
 
 import BlogItem from './BlogItem';
 
+import {List, Segment} from 'semantic-ui-react';
+
 const BlogList = ({blogItems, like}) => (
-    DOM.ul(null, _.map(blogItems, (blogItem) => (
-        DOM.li(
+    React.createElement(List, null, _.map(blogItems, (blogItem) => (
+        React.createElement(
+            List.Item,
             {key: blogItem._id},
             React.createElement(
-                BlogItem,
-                _.assign(
-                    {},
-                    blogItem,
-                    {like: () => like(blogItem._id)}
+                Segment,
+                {
+                    compact: true
+                },
+                React.createElement(
+                    BlogItem,
+                    _.assign(
+                        {},
+                        blogItem,
+                        {like: () => like(blogItem._id)}
+                    )
                 )
             )
         )

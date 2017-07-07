@@ -1,5 +1,5 @@
 import React from 'react';
-import {DOM, PropTypes} from 'react';
+import {PropTypes} from 'react';
 
 import _ from 'lodash';
 
@@ -7,26 +7,39 @@ import Image from './elements/Image';
 import TextBox from './elements/TextBox';
 import MetaInfo from './elements/MetaInfo';
 import Like from './elements/Like';
+import Title from './elements/Title';
+
+import {Grid} from 'semantic-ui-react';
 
 class BlogItem extends React.Component {
     render() {
-        const {image, description, metaInfo, like} = this.props;
+        const {image, description, metaInfo, title, like} = this.props;
         return (
-            DOM.div(
-                null,
-                React.createElement(Image, {
-                    src: image.src,
-                    alt: image.alt,
-                    width: '300px',
-                    height: '450px'
-                }),
-                React.createElement(TextBox, {description}),
-                React.createElement(MetaInfo, {
-                    author: metaInfo.author,
-                    created: metaInfo.created,
-                    modified: metaInfo.modified
-                }),
-                React.createElement(Like, {likes: metaInfo.likes, like})
+            React.createElement(
+                Grid,
+                {},
+                React.createElement(
+                    Grid.Column,
+                    {width: 5},
+                    React.createElement(Image, {
+                        src: image.src,
+                        alt: image.alt,
+                        width: '100%',
+                        height: '100%'
+                    })
+                ),
+                React.createElement(
+                    Grid.Column,
+                    {width: 10},
+                    React.createElement(Title, {title}),
+                    React.createElement(TextBox, {description}),
+                    React.createElement(MetaInfo, {
+                        author: metaInfo.author,
+                        created: metaInfo.created,
+                        modified: metaInfo.modified
+                    }),
+                    React.createElement(Like, {likes: metaInfo.likes, like})
+                )
             )
         );
     }
@@ -38,7 +51,8 @@ BlogItem.propTypes = {
         src: PropTypes.string,
         alt: PropTypes.string
     }),
-    description: PropTypes.string,
+    title: Title.propTypes.title,
+    description: TextBox.propTypes.description,
     metaInfo: PropTypes.shape(
         _.assign({}, MetaInfo.propTypes, _.pick(Like.propTypes, ['likes']))
     ),
@@ -48,6 +62,7 @@ BlogItem.propTypes = {
 BlogItem.defaultProps = {
     _id: '676hjh67',
     image: Image.defaultProps,
+    title: Title.defaultProps.title,
     description: TextBox.defaultProps.description,
     metaInfo: _.assign(
         {},

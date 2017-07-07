@@ -3,11 +3,20 @@ import {DOM, PropTypes} from 'react';
 
 import {formatDate} from 'helpers/date';
 
+import {Segment} from 'semantic-ui-react';
+
 const MetaInfo = ({author, created, modified}) => (
-    DOM.span(
-        null,
-        `${author} ${formatDate(created)}`,
-        modified && DOM.span(null, `(last modified: ${formatDate(modified)})`)
+    React.createElement(
+        Segment,
+        {vertical: true},
+        DOM.span(
+            null,
+            `${author} ${formatDate(created)}`,
+            modified && DOM.span(
+                null,
+                ` (last modified: ${formatDate(modified)})`
+            )
+        )
     )
 );
 

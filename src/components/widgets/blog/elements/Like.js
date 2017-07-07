@@ -1,11 +1,25 @@
 import React from 'react';
 import {DOM, PropTypes} from 'react';
 
+import {Segment, Button} from 'semantic-ui-react';
+
 const Like = ({likes, like}) => (
-    DOM.span(
-        null,
-        DOM.button({onClick: () => like()}, 'Like'),
-        isNaN(likes) || DOM.span(null, `${likes}`)
+    React.createElement(
+        Segment,
+        {vertical: true},
+        React.createElement(
+            Button,
+            {
+                content: 'Like',
+                icon: 'heart',
+                label: {
+                    basic: true,
+                    content: likes
+                },
+                labelPosition: 'right',
+                onClick: () => like()
+            }
+        )
     )
 );
 

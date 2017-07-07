@@ -2,6 +2,7 @@ import React from 'react';
 import {PropTypes} from 'react';
 
 import c3 from 'c3';
+import {Segment} from 'semantic-ui-react';
 
 class PieChart extends React.Component {
     componentDidMount() {
@@ -22,7 +23,11 @@ class PieChart extends React.Component {
         this.pieChart = this.pieChart.destroy();
     }
     render() {
-        return <div ref={el => this.container = el} />;
+        return (
+            <Segment>
+                <div ref={el => this.container = el} />
+            </Segment>
+        );
     }
 }
 

@@ -4,6 +4,7 @@
   "description": "My project version on React for Webdevelopers Thinknetica course.",
   "main": "index.js",
   "scripts": {
+    "start": "gulp build ./semantic/gulpfile.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,11 +23,16 @@
     "babel-loader": "^7.1.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
     "eslint": "^4.1.1",
     "eslint-plugin-destructuring": "^2.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-react": "^7.1.0",
+    "file-loader": "^0.11.2",
     "react-hot-loader": "^3.0.0-beta.6",
+    "semantic-ui": "^2.2.10",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.5.0"
   },
@@ -37,6 +43,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "semantic-ui-react": "^0.70.0"
   }
 }
