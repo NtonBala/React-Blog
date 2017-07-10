@@ -1,10 +1,9 @@
-import React from 'react';
-import {PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 
 import {Segment, Header} from 'semantic-ui-react';
 
 const Title = ({title}) => (
-    <Segment vertical>
+    <Segment vertical basic>
         <Header size="large">{title}</Header>
     </Segment>
 );

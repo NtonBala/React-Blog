@@ -1,5 +1,4 @@
-import React from 'react';
-import {PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 
 import _ from 'lodash';
 
@@ -17,10 +16,17 @@ class BlogItem extends React.Component {
         return (
             React.createElement(
                 Grid,
-                {},
+                {
+                    centered: true,
+                    columns: 3
+                },
                 React.createElement(
                     Grid.Column,
-                    {width: 5},
+                    {
+                        computer: 4,
+                        tablet: 8,
+                        mobile: 15
+                    },
                     React.createElement(Image, {
                         src: image.src,
                         alt: image.alt,
@@ -30,7 +36,11 @@ class BlogItem extends React.Component {
                 ),
                 React.createElement(
                     Grid.Column,
-                    {width: 10},
+                    {
+                        computer: 12,
+                        tablet: 8,
+                        mobile: 15
+                    },
                     React.createElement(Title, {title}),
                     React.createElement(TextBox, {description}),
                     React.createElement(MetaInfo, {

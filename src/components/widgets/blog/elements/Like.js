@@ -1,12 +1,11 @@
-import React from 'react';
-import {DOM, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 
 import {Segment, Button} from 'semantic-ui-react';
 
 const Like = ({likes, like}) => (
     React.createElement(
         Segment,
-        {vertical: true},
+        {vertical: true, textAlign: 'right', basic: true},
         React.createElement(
             Button,
             {

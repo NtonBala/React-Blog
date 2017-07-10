@@ -33,7 +33,7 @@ class BlogPage extends React.Component {
             );
 
         return (
-            <div>
+            <div style={{width:'80%', margin:'20px auto 40px auto'}}>
                 <BlogList
                     blogItems = {blogItems}
                     like = {this.like}

@@ -1,5 +1,4 @@
-import React from 'react';
-import {DOM, PropTypes} from 'react';
+import React, {DOM, PropTypes} from 'react';
 
 import {Segment} from 'semantic-ui-react';
 

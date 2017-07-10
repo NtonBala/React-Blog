@@ -30,11 +30,15 @@ module.exports = {
         ],
         "linebreak-style": [
             "error",
-            "windows"
+            (require("os").EOL === "\r\n" ? "windows" : "unix")
         ],
         "quotes": [
             "error",
-            "single"
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
         ],
         "semi": [
             "error",
@@ -49,9 +53,14 @@ module.exports = {
         "camelcase": 1,
         "import/max-dependencies": ["warn", {"max": 10}],
         "keyword-spacing": 1,
-        "max-len": ["error", 80, 2],
+        "max-len": [
+            "error",
+            {
+                "ignoreUrls": true,
+                "ignoreStrings": true
+            }
+        ],
         "newline-per-chained-call": 1,
-        "no-negated-condition": 1,
         "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }],
         "no-underscore-dangle": 1,
         "no-whitespace-before-property": 1,

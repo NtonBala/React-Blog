@@ -15,9 +15,5 @@ new webpackDevServer(webpack(config), {
     colors: true
   }
 }).listen(port, host, (err) => {
-  //err ? console.log(err) : console.log('Listening at ', host, ' on port ', port);
-  if (err) {
-    console.log(err);
-  }
-  console.log('Listening on port:', port);
+  err ? console.log(err) : console.log('Listening at', host, 'on port', port);
 });

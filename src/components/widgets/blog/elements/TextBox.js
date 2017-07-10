@@ -1,12 +1,11 @@
-import React from 'react';
-import {DOM, PropTypes} from 'react';
+import React, {DOM, PropTypes} from 'react';
 
 import {Segment} from 'semantic-ui-react';
 
 const TextBox = ({description}) => (
     React.createElement(
         Segment,
-        {vertical: true},
+        {vertical: true, basic: true},
         DOM.span(null, description)
     )
 );

@@ -1,5 +1,4 @@
-import React from 'react';
-import {PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 
 import c3 from 'c3';
 import {Segment} from 'semantic-ui-react';
