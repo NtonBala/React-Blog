@@ -10,6 +10,7 @@ var host = 'localhost',
 
 new webpackDevServer(webpack(config), {
   hot: true,
+  historyApiFallback: true,
   publicPath: config.output.publicPath,
   stats: {
     colors: true

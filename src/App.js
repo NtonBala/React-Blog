@@ -1,11 +1,10 @@
 import React from 'react';
 
-import BlogPage from 'components/BlogPage';
-
-import {blogItems} from 'constants/static/blogItems';
+import {Router, browserHistory} from 'react-router';
+import routes from 'routes';
 
 const App = () => (
-    <BlogPage blogItems={blogItems} />
+    <Router history={browserHistory} routes={routes} />
 );
 
 export default App;

@@ -12,7 +12,7 @@ import {Grid} from 'semantic-ui-react';
 
 class BlogItem extends React.Component {
     render() {
-        const {image, description, metaInfo, title, like} = this.props;
+        const {image, description, metaInfo, title, like, index} = this.props;
         return (
             React.createElement(
                 Grid,
@@ -41,7 +41,7 @@ class BlogItem extends React.Component {
                         tablet: 8,
                         mobile: 15
                     },
-                    React.createElement(Title, {title}),
+                    React.createElement(Title, {title, index}),
                     React.createElement(TextBox, {description}),
                     React.createElement(MetaInfo, {
                         author: metaInfo.author,

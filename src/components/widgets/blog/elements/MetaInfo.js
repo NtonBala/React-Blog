@@ -28,8 +28,7 @@ MetaInfo.propTypes = {
 
 MetaInfo.defaultProps = {
     author: 'Anonymous',
-    created: '1970-01-01T00:00:00.013Z',
-    modified: '1970-01-01T00:00:00.013Z'
+    created: '1970-01-01T00:00:00.013Z'
 };
 
 export default MetaInfo;

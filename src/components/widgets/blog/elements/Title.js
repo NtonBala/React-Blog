@@ -2,9 +2,14 @@ import React, {PropTypes} from 'react';
 
 import {Segment, Header} from 'semantic-ui-react';
 
-const Title = ({title}) => (
+import Link from 'components/elements/Link';
+import {postsPath} from 'helpers/routes';
+
+const Title = ({title, index}) => (
     <Segment vertical basic>
-        <Header size="large">{title}</Header>
+        <Header size="large">
+            <Link to={postsPath(index)}>{title}</Link>
+        </Header>
     </Segment>
 );
 

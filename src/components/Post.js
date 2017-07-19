@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import _ from 'lodash';
 import {getNewBlogItems as update} from 'helpers/like';
 
-import BlogList from 'components/widgets/blog/BlogList';
-import PieChart from 'components/widgets/blog/PieChart';
+import BlogItem from 'components/widgets/blog/BlogItem';
 
 import {fetchPosts} from 'helpers/rest';
 
-class BlogPage extends React.Component {
+import {Item} from 'semantic-ui-react';
+
+class Post extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,23 +29,22 @@ class BlogPage extends React.Component {
     }
     render() {
         const {blogItems} = this.state,
-            columns = _.map(
-                blogItems,
-                item => [item.title, item.metaInfo.likes]
-            );
+            itemIndex = this.props.params.id,
+            blogItem = blogItems[itemIndex];
 
         return (
-            <div>
-                <BlogList
-                    blogItems = {blogItems}
-                    like = {this.like}
+            <Item.Group>
+                <BlogItem
+                    {...blogItem}
+                    like={() => this.like(blogItem._id)}
                 />
-                <PieChart
-                    columns = {columns}
-                />
-            </div>
+            </Item.Group>
         );
     }
 }
 
-export default BlogPage;
+Post.propTypes = {
+    params: PropTypes.object
+};
+
+export default Post;

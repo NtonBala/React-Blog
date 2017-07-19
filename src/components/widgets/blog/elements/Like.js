@@ -28,7 +28,8 @@ Like.propTypes = {
 };
 
 Like.defaultProps = {
-    likes: 0
+    likes: 0,
+    like: () => true
 };
 
 export default Like;
