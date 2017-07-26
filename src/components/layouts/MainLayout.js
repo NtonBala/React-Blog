@@ -9,7 +9,6 @@ import Link from 'components/elements/Link';
 const MainLayout = ({children}) => (
     <Container>
         <Logo/>
-        <GoBackButton/>
         {children}
         <Footer/>
     </Container>
@@ -31,10 +30,6 @@ const Footer = () => (
     <Segment>
         Powered by Thinknetica React Course
     </Segment>
-);
-
-const GoBackButton = () => (
-    <Button onClick={() => history.goBack()}>Back</Button>
 );
 
 export default MainLayout;

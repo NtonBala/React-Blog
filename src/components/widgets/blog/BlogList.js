@@ -6,7 +6,7 @@ import BlogItem from './BlogItem';
 import {List, Segment} from 'semantic-ui-react';
 
 const BlogList = ({blogItems, like}) => (
-    React.createElement(List, null, _.map(blogItems, (blogItem, index) => (
+    React.createElement(List, null, _.map(blogItems, (blogItem) => (
         React.createElement(
             List.Item,
             {key: blogItem._id},
@@ -21,8 +21,7 @@ const BlogList = ({blogItems, like}) => (
                         {},
                         blogItem,
                         {
-                            like: () => like(blogItem._id),
-                            index
+                            like: () => like(blogItem._id)
                         }
                     )
                 )

@@ -1,12 +1,14 @@
 import React from 'react';
 
 import _ from 'lodash';
-import {getNewBlogItems as update} from 'helpers/like';
+
+import {updateItemsMetaInfo as update} from 'helpers/like';
 
 import BlogList from 'components/widgets/blog/BlogList';
 import PieChart from 'components/widgets/blog/PieChart';
 
 import {fetchPosts} from 'helpers/rest';
+import {fetchMetaInfo} from '../helpers/rest';
 
 class BlogPage extends React.Component {
     constructor(props) {
@@ -16,10 +18,12 @@ class BlogPage extends React.Component {
         };
         this.like = _.bind(this.like, this);
     }
-    like(id) {
-        const {blogItems} = this.state,
-            newBlogItems = update(blogItems, id);
-        this.setState({blogItems: newBlogItems});
+    like(_id) {
+        const {blogItems} = this.state;
+
+        fetchMetaInfo(_id, update, blogItems,
+            (newBlogItems) => this.setState({blogItems: newBlogItems})
+        );
     }
     componentDidMount() {
         fetchPosts(

@@ -1,36 +1,38 @@
 import React, {PropTypes} from 'react';
 
 import _ from 'lodash';
-import {getNewBlogItems as update} from 'helpers/like';
+
+import {updateItemMetaInfo as update} from 'helpers/like';
 
 import BlogItem from 'components/widgets/blog/BlogItem';
 
-import {fetchPosts} from 'helpers/rest';
+import {fetchPost, fetchMetaInfo} from 'helpers/rest';
 
 import {Item} from 'semantic-ui-react';
 
-class Post extends React.Component {
+class BlogPost extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            blogItems: []
+            blogItem: {}
         };
         this.like = _.bind(this.like, this);
     }
-    like(id) {
-        const {blogItems} = this.state,
-            newBlogItems = update(blogItems, id);
-        this.setState({blogItems: newBlogItems});
+    like(_id) {
+        const {blogItem} = this.state;
+
+        fetchMetaInfo(_id, update, blogItem,
+            (newBlogItem) => this.setState({blogItem: newBlogItem})
+        );
     }
     componentDidMount() {
-        fetchPosts(
-            (blogItems) => this.setState({blogItems})
+        fetchPost(
+            this.props.params.post_id,
+            (blogItem) => this.setState({blogItem})
         );
     }
     render() {
-        const {blogItems} = this.state,
-            itemIndex = this.props.params.id,
-            blogItem = blogItems[itemIndex];
+        const {blogItem} = this.state;
 
         return (
             <Item.Group>
@@ -43,8 +45,8 @@ class Post extends React.Component {
     }
 }
 
-Post.propTypes = {
+BlogPost.propTypes = {
     params: PropTypes.object
 };
 
-export default Post;
+export default BlogPost;

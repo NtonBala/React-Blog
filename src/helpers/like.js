@@ -1,13 +1,22 @@
 import _ from 'lodash';
 import update from 'immutability-helper';
 
-export const getNewBlogItems = (blogItems, _id) => {
+export const updateItemsMetaInfo = (blogItems, metaInfo, setNewState, _id) => {
     const index = _.findIndex(blogItems, {_id});
 
     const newBlogItems = update(
         blogItems,
-        {[index]: {metaInfo: {likes: {$apply: x => x + 1}}}}
+        {[index]: {$merge: {metaInfo}}}
     );
 
-    return newBlogItems;
+    setNewState(newBlogItems);
+};
+
+export const updateItemMetaInfo = (blogItem, metaInfo, setNewState) => {
+    const newBlogItem = update(
+        blogItem,
+        {$merge: {metaInfo}}
+    );
+
+    setNewState(newBlogItem);
 };
