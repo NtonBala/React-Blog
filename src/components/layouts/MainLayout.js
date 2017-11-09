@@ -1,8 +1,6 @@
 import React, {PropTypes} from 'react';
 
-import {Button, Segment, Header, Container} from 'semantic-ui-react';
-
-import history from 'helpers/history';
+import {Segment, Header, Container} from 'semantic-ui-react';
 
 import Link from 'components/elements/Link';
 
