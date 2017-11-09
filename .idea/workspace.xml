@@ -2,8 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbfc7658-0e79-45bf-b587-a6e48a0003d0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/semantic/src/themes/material/assets/fonts/icons.woff2" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/layouts/MainLayout.js" afterPath="$PROJECT_DIR$/src/components/layouts/MainLayout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic.json" afterPath="$PROJECT_DIR$/semantic.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/behaviors/form.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/behaviors/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/form.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/form.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/menu.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/menu.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/message.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/message.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/table.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/table.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/icon.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/icon.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/input.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/input.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/segment.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/segment.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/step.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/step.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/globals/site.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/globals/site.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/dimmer.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/dimmer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/popup.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/search.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/sticky.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/header.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/header.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/list.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/list.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/globals/reset.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/globals/reset.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/globals/site.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/globals/site.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/dropdown.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/dropdown.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/modal.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/modal.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/project/install.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/project/install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/tasks.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/tasks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/install.js" afterPath="$PROJECT_DIR$/semantic/tasks/install.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,73 +48,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlogItem.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/widgets/blog/BlogItem.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Blog.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/Blog.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/helpers/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/BlogPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogPost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/BlogPost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/widgets/blog/BlogList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -217,7 +196,7 @@
             <path>
               <item name="React-Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="React-Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="semantic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -420,10 +399,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265364000" />
+    <option name="totallyTimeSpent" value="266344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -431,17 +410,26 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33060557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3371522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33060557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19667171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -476,7 +464,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/BlogList.js" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -535,6 +522,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -568,13 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -681,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,9 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,6 +725,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
