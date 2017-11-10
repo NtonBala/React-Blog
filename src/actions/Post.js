@@ -47,7 +47,7 @@ export const incrementLikes = (id) => (
         dispatch(requestIncrementLikes(id));
 
         return request
-            .post(`${API_ROOT}/posts`)
+            .put(`${API_ROOT}/posts`)
             .send({post_id: id}) //eslint-disable-line camelcase
             .end((err) => {
                 err ? dispatch(errorIncrementLikes()) :
