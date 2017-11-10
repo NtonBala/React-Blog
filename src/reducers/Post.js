@@ -22,8 +22,8 @@ export default (state, action) => {
             return assign({}, state, {isRequesting: false, error: true});
         case types.INCREMENT_POST_LIKES_SUCCESS:
             return update(state, {
-                isRequesting: false,
-                error: false,
+                isRequesting: {$set: false},
+                error: {$set: false},
                 entry: {
                     metaInfo: {
                         likes: {$apply: (count) => (count + 1)}
