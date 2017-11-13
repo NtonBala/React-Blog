@@ -8,7 +8,7 @@ const initialState = {
     entry: {}
 };
 
-export default (state, action) => {
+export default (state = initialState, action) => {
     switch (action.type) {
         case types.FETCH_POST_REQUEST:
             return assign({}, initialState, {isRequesting: true});
