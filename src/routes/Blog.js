@@ -1,13 +1,13 @@
-import BlogPage from 'components/BlogPage';
 import MainLayout from 'components/layouts/MainLayout';
-import BlogPost from 'components/BlogPost';
 import {postsPath} from 'helpers/routes';
 import {fetchPosts} from '../actions/Posts';
 import {fetchPost} from '../actions/Post';
+import PostsContainer from '../containers/PostsContainer';
+import PostContainer from '../containers/PostContainer';
 
 const Index = {
     path: '/',
-    component: BlogPage,
+    component: PostsContainer,
     prepareData: (store) => {
         store.dispatch(fetchPosts());
     }
@@ -15,7 +15,7 @@ const Index = {
 
 const PostRoute = {
     path: postsPath(),
-    component: BlogPost,
+    component: PostContainer,
     prepareData: (store, query, params) => {
         store.dispatch(fetchPost(params.post_id));
     }
