@@ -12,4 +12,4 @@ const actionsToProps = (dispatch, ownProps) => ({
     like: () => dispatch(incrementLikes(ownProps.params.post_id))
 });
 
-export default connect(stateToProps, actionsToProps())(BlogPost);
+export default connect(stateToProps, actionsToProps)(BlogPost);
