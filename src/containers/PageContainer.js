@@ -5,7 +5,7 @@ import {incrementLikes} from '../actions/Posts';
 
 const stateToProps = (state) => ({
     blogItems: state.posts.entries,
-    isFetching: state.posts.isFetching,
+    isRequesting: state.posts.isRequesting,
     error: state.posts.error
 });
 
