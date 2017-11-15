@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import BlogList from '../components/widgets/blog/BlogList';
+import BlogPage from '../components/BlogPage';
 import {flowRight} from 'lodash/util';
 import {incrementLikes} from '../actions/Posts';
 
@@ -13,4 +13,4 @@ const actionsToProps = (dispatch) => ({
     like: flowRight(dispatch, incrementLikes)
 });
 
-export default connect(stateToProps, actionsToProps)(BlogList);
+export default connect(stateToProps, actionsToProps)(BlogPage);
