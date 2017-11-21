@@ -1,25 +1,16 @@
 import React, {PropTypes} from 'react';
 import BlogItem from 'components/widgets/blog/BlogItem';
 import {Item} from 'semantic-ui-react';
-import Error from 'components/elements/Error';
-import Spinner from 'components/elements/Spinner';
+import {isEmpty} from 'lodash/lang';
 
-const BlogPost = ({blogItem, like, isRequesting, error}) => (
+const BlogPost = ({blogItem}) => (
     <Item.Group>
-        {isRequesting && <Spinner/>}
-        {error && <Error/>}
-        {blogItem && <BlogItem
-            {...blogItem}
-            like={() => like(blogItem._id)}
-        />}
+        {!isEmpty(blogItem) && <BlogItem {...blogItem}/>}
     </Item.Group>
 );
 
 BlogPost.propTypes = {
-    blogItem: PropTypes.object,
-    like: BlogItem.propTypes.like,
-    isRequesting: PropTypes.bool,
-    error: PropTypes.bool
+    blogItem: PropTypes.object
 };
 
 BlogPost.defaultProps = {
@@ -29,10 +20,7 @@ BlogPost.defaultProps = {
         title: BlogItem.defaultProps.title,
         description: BlogItem.defaultProps.description,
         metaInfo: BlogItem.defaultProps.metaInfo
-    },
-    like: BlogItem.defaultProps.like,
-    isRequesting: false,
-    error: false
+    }
 };
 
 export default BlogPost;

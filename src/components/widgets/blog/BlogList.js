@@ -1,45 +1,28 @@
 import React, {PropTypes} from 'react';
-import _ from 'lodash';
-
+import {map} from 'lodash/collection';
 import BlogItem from './BlogItem';
-
 import {List, Segment} from 'semantic-ui-react';
 
-const BlogList = ({blogItems, like}) => (
-    React.createElement(List, null, _.map(blogItems, (blogItem) => (
-        React.createElement(
-            List.Item,
-            {key: blogItem._id},
-            React.createElement(
-                Segment,
-                {
-                    compact: true
-                },
-                React.createElement(
-                    BlogItem,
-                    _.assign(
-                        {},
-                        blogItem,
-                        {
-                            like: () => like(blogItem._id)
-                        }
-                    )
-                )
-            )
-        )
-    )))
-);
+const BlogList = ({blogItems}) => {
+    return (<List>
+        {map(blogItems, item => (
+            <List.Item key={item._id}>
+                <Segment compact={true}>
+                    <BlogItem {...item}/>
+                </Segment>
+            </List.Item>
+        ))}
+    </List>);
+};
 
 BlogList.propTypes = {
     blogItems: PropTypes.arrayOf(
-        PropTypes.shape(_.omit(BlogItem.propTypes, ['like']))
-    ),
-    like: BlogItem.propTypes.like
+        PropTypes.shape(BlogItem.propTypes)
+    )
 };
 
 BlogList.defaultProps = {
-    blogItems: [_.omit(BlogItem.defaultProps, ['like'])],
-    like: BlogItem.defaultProps.like
+    blogItems: [BlogItem.defaultProps]
 };
 
 export default BlogList;

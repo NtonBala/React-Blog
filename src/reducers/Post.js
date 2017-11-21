@@ -1,9 +1,11 @@
 import {assign} from 'lodash/object';
+import {isEmpty} from 'lodash/lang';
 import * as types from '../constants/actionTypes/PostActionTypes';
 import update from 'immutability-helper';
+import {REQUEST_INCREMENT_LIKE} from '../constants/actionTypes/actionTypes';
 
 const initialState = {
-    isRequesting: false,
+    isFetching: false,
     error: false,
     entry: {}
 };
@@ -11,19 +13,13 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case types.FETCH_POST_REQUEST:
-            return assign({}, initialState, {isRequesting: true});
+            return assign({}, initialState, {isFetching: true});
         case types.FETCH_POST_ERROR:
             return assign({}, initialState, {error: true});
         case types.FETCH_POST_SUCCESS:
             return assign({}, initialState, {entry: action.response});
-        case types.INCREMENT_POST_LIKES_REQUEST:
-            return assign({}, state, {isRequesting: true});
-        case types.INCREMENT_POST_LIKES_ERROR:
-            return assign({}, state, {isRequesting: false, error: true});
-        case types.INCREMENT_POST_LIKES_SUCCESS:
-            return update(state, {
-                isRequesting: {$set: false},
-                error: {$set: false},
+        case REQUEST_INCREMENT_LIKE:
+            return isEmpty(state.entry) ? state : update(state, {
                 entry: {
                     metaInfo: {
                         likes: {$apply: (count) => (count + 1)}

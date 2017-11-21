@@ -3,11 +3,11 @@ import _ from 'lodash';
 import Image from './elements/Image';
 import TextBox from './elements/TextBox';
 import MetaInfo from './elements/MetaInfo';
-import Like from './elements/Like';
+import LikeContainer from '../../../containers/LikeContainer';
 import Title from './elements/Title';
 import {Grid} from 'semantic-ui-react';
 
-const BlogItem = ({image, description, metaInfo, title, _id, like}) => (
+const BlogItem = ({image, description, metaInfo, title, _id}) => (
     <Grid centered={true} columns={3}>
         <Grid.Column
             computer={4}
@@ -33,9 +33,9 @@ const BlogItem = ({image, description, metaInfo, title, _id, like}) => (
                 created={metaInfo.created}
                 modified={metaInfo.modified}
             />
-            <Like
+            <LikeContainer
                 likes={metaInfo.likes}
-                like={like}
+                id={_id}
             />
         </Grid.Column>
     </Grid>
@@ -50,9 +50,8 @@ BlogItem.propTypes = {
     title: Title.propTypes.title,
     description: TextBox.propTypes.description,
     metaInfo: PropTypes.shape(
-        _.assign({}, MetaInfo.propTypes, _.pick(Like.propTypes, ['likes']))
-    ),
-    like: Like.propTypes.like
+        _.assign({}, MetaInfo.propTypes, _.pick(LikeContainer.propTypes, ['likes']))
+    )
 };
 
 BlogItem.defaultProps = {
@@ -63,9 +62,8 @@ BlogItem.defaultProps = {
     metaInfo: _.assign(
         {},
         MetaInfo.defaultProps,
-        _.pick(Like.defaultProps, ['likes'])
-    ),
-    like: Like.defaultProps.like
+        _.pick(LikeContainer.defaultProps, ['likes'])
+    )
 };
 
 export default BlogItem;

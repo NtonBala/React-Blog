@@ -28,30 +28,3 @@ export const fetchPosts = () => (
             });
     }
 );
-
-//increment post likes
-const requestIncrementLikes = () => ({
-    type: types.INCREMENT_POSTS_LIKES_REQUEST
-});
-
-const errorIncrementLikes = () => ({
-    type: types.INCREMENT_POSTS_LIKES_ERROR
-});
-
-const successIncrementLikes = (id) => ({
-    type: types.INCREMENT_POSTS_LIKES_SUCCESS,
-    id
-});
-
-export const incrementLikes = (id) => (
-    (dispatch) => {
-        dispatch(requestIncrementLikes());
-
-        return request
-            .put(`${API_ROOT}/posts/${id}`)
-            .end((err) => {
-                err ? dispatch(errorIncrementLikes()) :
-                    dispatch(successIncrementLikes(id));
-            });
-    }
-);
