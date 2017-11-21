@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 import {Segment, Button} from 'semantic-ui-react';
 
-const Like = ({likes, like}) => (
+const Like = ({likes, like, id}) => (
     React.createElement(
         Segment,
         {vertical: true, textAlign: 'right', basic: true},
@@ -16,7 +16,7 @@ const Like = ({likes, like}) => (
                     content: likes
                 },
                 labelPosition: 'right',
-                onClick: () => like()
+                onClick: () => like(id)
             }
         )
     )
@@ -24,12 +24,14 @@ const Like = ({likes, like}) => (
 
 Like.propTypes = {
     likes: PropTypes.number,
-    like: PropTypes.func
+    like: PropTypes.func,
+    id: PropTypes.string
 };
 
 Like.defaultProps = {
     likes: 0,
-    like: () => true
+    like: () => true,
+    id: '676hjh67'
 };
 
 export default Like;
